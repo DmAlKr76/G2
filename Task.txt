@@ -1,10 +1,10 @@
-#выполняем комманды от суперпользователя (под root)
+#выполняем команды от суперпользователя (под root)
 #создаем группы
 groupadd bookkeepers
 groupadd storekeepers
 groupadd developers
 
-#создаем дирректории
+#создаем директории
 mkdir /var/data
 mkdir /var/data/invoices
 mkdir /var/data/web
@@ -13,15 +13,15 @@ mkdir /var/data/store
 #создаем пользователя admin
 useradd -s /bin/bash -m -p qwerty admin
 
-#назначаем admin владельцем соответствующих дирректорий
+#назначаем admin владельцем соответствующих директорий
 chown -R admin /var/data/invoices
 chown -R admin /var/data/web
 chown -R admin /var/data/store
 
-#переходим в дирректорию data
+#переходим в директорию data
 cd /var/data
 
-#назначаем права соответствующим дирректориям
+#назначаем права соответствующим директориям
 chmod 774 invoices
 chmod 774 web
 chmod 774 store
